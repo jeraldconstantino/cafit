@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_activity_bg"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoLoginID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/CAFitLoginID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="CAFit"
+        android:textAlignment="center"
+        android:textColor="#FFC098"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/logoLoginID"
+        app:layout_constraintStart_toStartOf="@+id/logoLoginID"
+        app:layout_constraintTop_toBottomOf="@+id/logoLoginID" />
+
+    <View
+        android:id="@+id/grayBGID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-11dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/gray_bg_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CAFitLoginID"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/dontHaveAccountID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Don't have an account?"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBGID"
+        app:layout_constraintStart_toStartOf="@+id/grayBGID"
+        app:layout_constraintTop_toBottomOf="@+id/loginID" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpButtonID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-11dp"
+        android:background="@null"
+        android:fontFamily="@font/poppins_black"
+        android:onClick="launchRegistrationActivity"
+        android:text="SIGN UP"
+        android:textColor="#FFC098"
+        app:layout_constraintEnd_toEndOf="@+id/dontHaveAccountID"
+        app:layout_constraintStart_toStartOf="@+id/dontHaveAccountID"
+        app:layout_constraintTop_toBottomOf="@+id/dontHaveAccountID" />
+
+
+    <EditText
+        android:id="@+id/emailInputLoginID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="username"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_username_icon"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Enter username"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="5dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBGID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/grayBGID"
+        app:layout_constraintTop_toTopOf="@+id/grayBGID"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/passwordInputLoginID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints="password"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_password_icon"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="5dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailInputLoginID"
+        app:layout_constraintStart_toStartOf="@+id/emailInputLoginID"
+        app:layout_constraintTop_toBottomOf="@+id/emailInputLoginID"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="LOG IN"
+        android:textColor="#111"
+        android:textSize="15sp"
+        app:backgroundTint="#FFC098"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordInputLoginID"
+        app:layout_constraintStart_toStartOf="@+id/passwordInputLoginID"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLoginID"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forgotPasswordID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@null"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="start"
+        android:text="Forgot password?"
+        android:textAllCaps="false"
+        android:textColor="#5C2A0B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordInputLoginID"
+        app:layout_constraintStart_toStartOf="@+id/passwordInputLoginID"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLoginID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

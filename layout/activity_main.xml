@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/initial_activity_bg"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-102dp"
+    tools:layout_editor_absoluteY="206dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/gray_bg_shape"
+        android:fontFamily="@font/poppins_black"
+        android:onClick="launchLoginActivity"
+        android:text="        LOGIN        "
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/CAFitDescID"
+        app:layout_constraintEnd_toStartOf="@+id/skipID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skipID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="200dp"
+        android:background="@null"
+        android:fontFamily="@font/poppins_black"
+        android:onClick="launchHomeActivity"
+        android:text="SKIP"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/CAFitDescID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginID"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/CAFitDescID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/app_desc_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/CAFitTitleID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="CAFit"
+        android:textColor="#111"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/CAFitDescID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CAFitDescID" />
+
+    <TextView
+        android:id="@+id/CAFitID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="The red line moved across the page. With each millimeter it advanced forward, something changed in the room. The actual change taking place was difficult to perceive, but the change was real."
+        android:textColor="#111"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CAFitDescID"
+        app:layout_constraintEnd_toEndOf="@+id/CAFitDescID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CAFitDescID"
+        app:layout_constraintTop_toBottomOf="@+id/CAFitTitleID"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
